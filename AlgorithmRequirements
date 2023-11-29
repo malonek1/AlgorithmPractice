@@ -1,0 +1,557 @@
+1)
+Imagine you have been given an array of integers, and a query number k.
+Your task is to write a function that finds all the triplets in the array that sum up to the query number k.
+
+Let’s illustrate this with some examples:
+
+Example 1:
+
+Input:
+
+nums = [1, 2, 3, 4, 5]
+k = 6
+
+Output:
+
+count_triplets(nums, k) -> 1
+
+In this case, there is only one triplet that sums up to 6: (1, 2, 3).
+
+Example 2:
+
+Input:
+
+nums = [1, 1, 1, 2, 2]
+k = 3
+
+Output:
+
+count_triplets(nums, k) -> 3
+
+In this case, there are three triplets that sum up to 3: (1, 1, 1), (1, 1, 1), and (1, 1, 1).
+
+
+
+
+
+
+2) Refer to Roman class for implementation
+Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+
+   Symbol       Value
+   I             1
+   V             5
+   X             10
+   L             50
+   C             100
+   D             500
+   M             1000
+
+   For example, 2 is written as II in Roman numeral, just two one's added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
+
+   Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+
+       I can be placed before V (5) and X (10) to make 4 and 9.
+       X can be placed before L (50) and C (100) to make 40 and 90.
+       C can be placed before D (500) and M (1000) to make 400 and 900.
+
+   Given an integer, convert it to a roman numeral.
+
+
+
+   Example 1:
+
+   Input: num = 3
+   Output: "III"
+   Explanation: 3 is represented as 3 ones.
+
+   Example 2:
+
+   Input: num = 58
+   Output: "LVIII"
+   Explanation: L = 50, V = 5, III = 3.
+
+   Example 3:
+
+   Input: num = 1994
+   Output: "MCMXCIV"
+   Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+
+
+
+
+
+=====COMPLETED SUCCESSFULLY======
+3) Refer to GFG for implementation
+Given a string, a character, and a count, the task is to print the string after
+the specified character has occurred count number of times.
+Print “Empty string” in case of any unsatisfying conditions.
+(Given character is not present, or present but less than given count, or given count completes on last index).
+If given count is 0, then given character doesn’t matter, just print the whole string.
+
+   Examples:
+
+   Input  :  str = "This is demo string"
+             char = i,
+             count = 3
+   Output :  ng
+
+   Input :  str = "geeksforgeeks"
+            char = e,
+            count = 2
+   Output : ksforgeeks
+
+
+
+
+
+====COMPLETED SUCCESSFULLY====
+4) Refer to Armstrong class for implementation
+Given a number x, determine whether the given number is Armstrong’s number or not.
+
+A positive integer of n digits is called an Armstrong number of order n (order is the number of digits) if
+
+abcd... = pow(a,n) + pow(b,n) + pow(c,n) + pow(d,n) + ....
+Example:
+
+Input:153
+Output: Yes
+153 is an Armstrong number.
+1*1*1 + 5*5*5 + 3*3*3 = 153
+
+
+Input: 120
+Output: No
+120 is not a Armstrong number.
+1*1*1 + 2*2*2 + 0*0*0 = 9
+
+Input: 1253
+Output: No
+1253 is not a Armstrong Number
+1*1*1*1 + 2*2*2*2 + 5*5*5*5 + 3*3*3*3 = 723
+
+Input: 1634
+Output: Yes
+1*1*1*1 + 6*6*6*6 + 3*3*3*3 + 4*4*4*4 = 1634
+
+
+
+
+
+
+5)
+Queue: Linked List Implementation (Refer to Queue class for implementation)
+Approach: To solve the problem follow the below idea:
+
+we maintain two pointers, front, and rear. The front points to the first item of the queue and rear points to the last item.
+
+enQueue(): This operation adds a new node after the rear and moves the rear to the next node.
+deQueue(): This operation removes the front node and moves the front to the next node.
+Follow the below steps to solve the problem:
+
+
+Learn more
+Create a class QNode with data members integer data and QNode* next
+A parameterized constructor that takes an integer x value as a parameter and sets data equal to x and next as NULL
+Create a class Queue with data members QNode front and rear
+Enqueue Operation with parameter x:
+Initialize QNode* temp with data = x
+If the rear is set to NULL then set the front and rear to temp and return(Base Case)
+Else set rear next to temp and then move rear to temp
+Dequeue Operation:
+If the front is set to NULL return(Base Case)
+Initialize QNode temp with front and set front to its next
+If the front is equal to NULL then set the rear to NULL
+Delete temp from the memory
+
+
+
+
+
+
+6) Refer to Knapsack class for implementation
+Given N items where each item has some weight and profit associated with it
+and also given a bag with capacity W, [i.e., the bag can hold at most W weight in it].
+The task is to put the items into the bag such that the sum of profits associated with them is the maximum possible.
+
+Note: The constraint here is we can either put an item completely into the bag or cannot put it at all
+[It is not possible to put a part of an item into the bag].
+
+Examples:
+
+
+Input: N = 3, W = 4, profit[] = {1, 2, 3}, weight[] = {4, 5, 1}
+Output: 3
+Explanation: There are two items which have weight less than or equal to 4.
+If we select the item with weight 4, the possible profit is 1.
+And if we select the item with weight 1, the possible profit is 3.
+So the maximum possible profit is 3.
+Note that we cannot put both the items with weight 4 and 1 together as the capacity of the bag is 4.
+
+Input: N = 3, W = 3, profit[] = {1, 2, 3}, weight[] = {4, 5, 6}
+Output: 0
+
+
+
+
+
+7) Refer to RepeatInteger class for implementation
+Given an array of integers arr[], The task is to find the index of first repeating element in it
+i.e. the element that occurs more than once and whose index of the first occurrence is the smallest.
+
+Examples:
+
+Input: arr[] = {10, 5, 3, 4, 3, 5, 6}
+Output: 5
+Explanation: 5 is the first element that repeats
+
+Input: arr[] = {6, 10, 5, 4, 9, 120, 4, 6, 10}
+Output: 6
+Explanation: 6 is the first element that repeats
+
+
+
+
+8) Refer to Coin
+Given an array coins[] of size N and a target value V, where coins[i] represents the coins of different denominations.
+You have an infinite supply of each of coins. The task is to find minimum number of coins required to make the given value V.
+If it’s not possible to make a change, print -1.
+
+Examples:
+
+Input: coins[] = {25, 10, 5}, V = 30
+Output: Minimum 2 coins required We can use one coin of 25 cents and one of 5 cents
+
+Input: coins[] = {9, 6, 5, 1}, V = 11
+Output: Minimum 2 coins required We can use one coin of 6 cents and 1 coin of 5 cents
+
+
+
+
+
+9) Refer to BitwiseProfession
+Consider a special family of Engineers and Doctors with following rules :
+
+Everybody has two children.
+First child of an Engineer is an Engineer and second child is a Doctor.
+First child of an Doctor is Doctor and second child is an Engineer.
+All generations of Doctors and Engineers start with Engineer.
+We can represent the situation using below diagram:
+
+                E
+           /
+          E          D
+        /          /
+       E     D     D    E
+      /    /    /    /
+     E   D D   E  D  E  E  D
+Given level and position of a person in above ancestor tree, find the profession of the person.
+Examples :
+
+Input : level = 4, pos = 2
+Output : Doctor
+
+Input : level = 3, pos = 4
+Output : Engineer
+
+
+
+
+10) StackFromQueue for implementation
+Given a Queue data structure that supports standard operations like enqueue() and dequeue().
+The task is to implement a Stack data structure using only instances of Queue and Queue operations allowed on the instances.
+
+Stack and Queue with insert and delete operations
+
+A Stack can be implemented using two queues. Let Stack to be implemented be ‘s’ and queues used to implement are ‘q1’ and ‘q2’.
+Stack ‘s’ can be implemented in two ways:
+
+Implement Stack using Queues By making push() operation costly:
+Below is the idea to solve the problem:
+
+
+The idea is to keep newly entered element at the front of ‘q1’ so that pop operation dequeues from ‘q1’.
+‘q2’ is used to put every new element in front of ‘q1’.
+
+Follow the below steps to implement the push(s, x) operation:
+Enqueue x to q2.
+One by one dequeue everything from q1 and enqueue to q2.
+Swap the queues of q1 and q2.
+Follow the below steps to implement the pop(s) operation:
+Dequeue an item from q1 and return it.
+
+
+
+
+11) Refer to merge package for implementation
+AuxiliaryGiven two sorted linked lists consisting of N and M nodes respectively. The task is to merge both of the lists (in place) and return the head of the merged list.
+
+Examples:
+
+Input: a: 5->10->15, b: 2->3->20
+Output: 2->3->5->10->15->20
+
+Input: a: 1->1, b: 2->4
+Output: 1->1->2->4
+
+Brute Force Way:
+
+The Approach:
+
+In this Approach we use a vector of (n+m) size where n and m are length respective linked list
+and then store all the element in vector and then we sort the vector and make new linked list it will be our answer.
+
+
+
+
+12) Refer to Spiral for implementation
+Given a 2D array, print it in spiral form.
+
+Examples:
+
+Input:  {{1,    2,   3,   4},
+              {5,    6,   7,   8},
+             {9,   10,  11,  12},
+            {13,  14,  15,  16 }}
+Output: 1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
+Explanation: The output is matrix in spiral format.
+
+
+Input: { {1,   2,   3,   4,  5,   6},
+           {7,   8,   9,  10,  11,  12},
+          {13,  14,  15, 16,  17,  18}}
+
+
+Output: 1 2 3 4 5 6 12 18 17 16 15 14 13 7 8 9 10 11
+Explanation: The output is matrix in spiral format.
+
+
+
+
+13) Refer to Jump for implementation
+A number is called as a Jumping Number if all adjacent digits in it differ by 1. The difference between ‘9’ and ‘0’ is not considered as 1.
+All single digit numbers are considered as Jumping Numbers. For example 7, 8987 and 4343456 are Jumping numbers but 796 and 89098 are not.
+Given a positive number x, print all Jumping Numbers smaller than or equal to x. The numbers can be printed in any order.
+
+Example:
+
+Input: x = 20
+Output:  0 1 2 3 4 5 6 7 8 9 10 12
+
+Input: x = 105
+Output:  0 1 2 3 4 5 6 7 8 9 10 12
+         21 23 32 34 43 45 54 56 65
+         67 76 78 87 89 98 101
+
+Note: Order of output doesn't matter,
+i.e. numbers can be printed in any order
+
+
+
+
+14)
+The cost of a stock on each day is given in an array.
+Find the maximum profit that you can make by buying and selling on those days.
+If the given array of prices is sorted in decreasing order, then profit cannot be earned at all.
+
+Examples:
+
+Input: arr[] = {100, 180, 260, 310, 40, 535, 695}
+Output: 865
+Explanation: Buy the stock on day 0 and sell it on day 3 => 310 – 100 = 210
+                       Buy the stock on day 4 and sell it on day 6 => 695 – 40 = 655
+                       Maximum Profit  = 210 + 655 = 865
+
+Input: arr[] = {4, 2, 2, 2, 4}
+Output: 2
+Explanation: Buy the stock on day 1 and sell it on day 4 => 4 – 2 = 2
+                       Maximum Profit  = 2
+
+
+
+15) See NumberToWords for implementation
+Given an integer N, the task is to convert the given number into words.
+
+Examples :
+
+Input: N = 438237764
+Output: Four Hundred Thirty Eight Million Two Hundred Thirty Seven Thousand Seven Hundred Sixty Four
+
+Input: N = 1000
+Output: One Thousand
+
+
+Recommended: Please solve it on “PRACTICE” first, before moving on to the solution.
+Approach: This approach is valid for converting number into words for up to 20 digits,
+and is basically based on Brute Force Logic.
+
+The idea is to break down the number into International Number System,
+i.e., smaller groups of three digits (hundreds, tens, and ones), and convert each group into words.
+
+Consider the below illustration:
+
+
+Suppose N = 1234567
+
+Now, process this number N in groups of three digits from right to left.
+
+Iteration 1:
+
+Current Group: 567
+Word Representation: Five Hundred Sixty-Seven
+Multiplier: “”
+At this point, the partial word representation is
+“Five Hundred Sixty-Seven”.
+
+Iteration 2:
+
+Current Group: 234
+Word Representation: Two Hundred Thirty-Four
+Multiplier: Thousand
+The updated word representation becomes
+“Two Hundred Thirty-Four Thousand Five Hundred Sixty-Seven”.
+
+
+Iteration 3:
+
+Current Group: 1
+English Representation: One
+Multiplier: Million
+Hence, finally the given number into words becomes
+“One Million Two Hundred Thirty-Four Thousand Five Hundred Sixty-Seven“.
+
+NOTE: The following code supports numbers up to 15 digits, i.e., numbers from 0 to trillions.
+The code prints according to the western number system.
+
+
+
+
+
+16) Refer to Kadane for implementation
+Given an array arr[] of size N. The task is to find the sum of the contiguous subarray within a arr[] with the largest sum.
+
+
+The idea of Kadane’s algorithm is to maintain a variable max_ending_here that
+stores the maximum sum contiguous subarray ending at current index
+and a variable max_so_far stores the maximum sum of contiguous subarray found so far,
+Everytime there is a positive-sum value in max_ending_here
+compare it with max_so_far and update max_so_far if it is greater than max_so_far.
+
+So the main Intuition behind Kadane’s Algorithm is,
+
+
+The subarray with negative sum is discarded (by assigning max_ending_here = 0 in code).
+We carry subarray till it gives positive sum.
+Pseudocode of Kadane’s algorithm:
+Initialize:
+    max_so_far = INT_MIN
+    max_ending_here = 0
+
+Loop for each element of the array
+
+  (a) max_ending_here = max_ending_here + a[i]
+  (b) if(max_so_far < max_ending_here)
+            max_so_far = max_ending_here
+  (c) if(max_ending_here < 0)
+            max_ending_here = 0
+return max_so_far
+
+
+
+Illustration of Kadane’s Algorithm:
+Lets take the example: {-2, -3, 4, -1, -2, 1, 5, -3}
+
+Note: in the image max_so_far is represented by Max_Sum and max_ending_here by Curr_Sum
+
+Maximum-Sum-Subarray-(-Kadane's-Algorithm)-(2)
+
+For i=0,  a[0] =  -2
+
+max_ending_here = max_ending_here + (-2)
+Set max_ending_here = 0 because max_ending_here < 0
+and set max_so_far = -2
+For i=1,  a[1] =  -3
+
+max_ending_here = max_ending_here + (-3)
+Since max_ending_here = -3 and max_so_far = -2, max_so_far will remain -2
+Set max_ending_here = 0 because max_ending_here < 0
+For i=2,  a[2] =  4
+
+
+max_ending_here = max_ending_here + (4)
+max_ending_here = 4
+max_so_far is updated to 4 because max_ending_here greater than max_so_far which was -2 till now
+For i=3,  a[3] =  -1
+
+max_ending_here = max_ending_here + (-1)
+max_ending_here = 3
+For i=4,  a[4] =  -2
+
+max_ending_here = max_ending_here + (-2)
+max_ending_here = 1
+For i=5,  a[5] =  1
+
+max_ending_here = max_ending_here + (1)
+max_ending_here = 2
+For i=6,  a[6] =  5
+
+max_ending_here = max_ending_here + (5)
+max_ending_here =
+max_so_far is updated to 7 because max_ending_here is greater than max_so_far
+For i=7,  a[7] =  -3
+
+max_ending_here = max_ending_here + (-3)
+max_ending_here = 4
+
+
+
+
+17) Refer to Egg
+Egg Dropping Puzzle using Dynamic Programming:
+The following is a description of the instance of this famous puzzle involving N = 2 eggs and a building with K = 36 floors.
+Suppose that we wish to know which stories in a 36-story building are safe to drop eggs from, and which will cause the eggs to break on landing. We make a few assumptions:
+
+An egg that survives a fall can be used again.
+A broken egg must be discarded.
+The effect of a fall is the same for all eggs.
+If an egg breaks when dropped, then it would break if dropped from a higher floor.
+If an egg survives a fall then it would survive a shorter fall.
+It is not ruled out that the first-floor windows break eggs, nor is it ruled out that the 36th-floor does not cause an egg to break.
+If only one egg is available and we wish to be sure of obtaining the right result, the experiment can be carried out in only one way. Drop the egg from the first-floor window; if it survives, drop it from the second-floor window. Continue upward until it breaks. In the worst case, this method may require 36 droppings. Suppose 2 eggs are available. What is the least number of egg droppings that are guaranteed to work in all cases?
+The problem is not actually to find the critical floor, but merely to decide floors from which eggs should be dropped so that the total number of trials is minimized.
+
+Note: In this post, we will discuss a solution to a general problem with ‘N’ eggs and ‘K’ floors
+
+
+
+
+18) Refer to Power for implementation
+Program to find whether a given number is power of 2
+Given a positive integer n, write a function to find if it is a power of 2 or not
+
+Examples:
+
+Input : n = 4
+Output : Yes
+Explanation: 2^2 = 4
+
+Input : n = 32
+Output : Yes
+Explanation: 2^5 = 32
+
+
+
+
+19) Refer to tree.png and binarytree package
+Find the diameter of a binary tree
+The diameter/width of a tree is defined as the number of nodes on the longest path between two end nodes.
+
+The diagram below shows two trees each with a diameter of nine, the leaves that form the ends of the longest path are shaded
+(note that there is more than one path in each tree of length nine, but no path longer than nine nodes).
+
+Approach: The diameter of a tree T is the largest of the following quantities:
+
+
+The diameter of T’s left subtree.
+The diameter of T’s right subtree.
+The longest path between leaves that goes through the root of T (this can be computed from the heights of the subtrees of T)
