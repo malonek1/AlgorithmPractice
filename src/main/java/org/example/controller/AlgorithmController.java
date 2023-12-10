@@ -65,7 +65,7 @@ public class AlgorithmController {
     }
 
     @GetMapping("/3sum")
-    public String threeSumClosest() {
+    public int threeSumClosest() {
         logger.info("getting results for the following endpoint: 3sum");
         int[] nums = {-1,2,1,-4,9,-12,1};
         return algorithmService.threeSumClosest(nums, -5);
